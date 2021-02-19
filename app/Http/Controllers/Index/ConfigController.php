@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Index;
 
 use App\Http\Controllers\Controller;
@@ -23,8 +22,6 @@ class ConfigController extends Controller
             foreach($config as $v){
                 $data[$v['keyword']][]=$v;
             }
-
-
             return response(['code'=>1000,'msg'=>'success','data'=>$data]);
         }catch (\Exception $e){
             return jsonErr($e);
