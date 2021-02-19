@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('upload')->name('upload.')->group(function(){
-    Route::post('image','ImagesController@store')->name('image');
-});
-
 
 Route::prefix('index')->namespace('Index')->name('index.')->group(function(){
     Route::prefix('config')->name('config.')->group(function() {
